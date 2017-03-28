@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/phadmin.css">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="plus/webuploader/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="plus/datepicker/skin/WdatePicker.css">
+    <link rel="stylesheet" type="text/css" href="plus/ztree/zTreeStyle/zTreeStyle.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1></h1>
+        <div id="user-nav" class="navbar">
+            <ul class="nav">
+                <li><a title="" href="#"><i class="icon icon-user"></i>  <span class="text">欢迎回来，超级管理员</span></a>
+                </li>
+                <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text" >修改密码</span></a></li>
+                <li class=""><a title="" href="javescript:;" id="logout"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <!--sidebar-menu-->
+    <aside id="sidebar">
+        <div class="stitle"><i class="icon icon-dashboard"></i>&nbsp;&nbsp;&nbsp;&nbsp;平台导航</div>
+        <ul>
+            <li class="submenu "><a href="index.html"><i class="icon icon-home"></i> <span>主页</span></a></li>
+            <li class="submenu "> <a href="table.html"><i class="icon icon-check"></i> <span>列表页</span></a>
+            </li>
+            <li class="submenu "> <a href="ico.html"><i class="icon icon-check"></i> <span>图标页</span></a>
+            </li>
+            <li class="submenu active"> <a href="form.html"><i class="icon icon-check"></i> <span>表单页</span></a>
+            </li>
+        </ul>
+    </aside>
+    <section id="content">
+        <div id="content-header">
+            <div id="breadcrumb"> <a href="javascript:;" class="tip-bottom"><i class="icon-home"></i>主页</a> <a href="#" class="current">填写表单</a> </div>
+        </div>
+        <div id="content-body">
+            <div class="content-form">
+                <form>
+                    <ul>
+                        <li class="control-group">
+                            <label class="control-label"><em class="mark-red">(必填)</em>用户名 :</label>
+                            <div class="controls">
+                                <input type="text" name="" placeholder="请输入用户名">
+                            </div>
+                        </li>
+                        <li class="control-group">
+                            <label class="control-label"><em class="mark-red"></em>图片 :</label>
+                            <div class="controls">
+                                <div class="control-pic" id="control-pic">
+                                    <ul>
+                                        <li>
+                                            <i style="background-image: url(pic/temp1.jpg);"><a href="javascript:;" class="icon-trash"></a></i>
+                                        </li>
+                                        <li>
+                                            <i style="background-image: url(pic/temp2.jpg);"><a href="javascript:;" class="icon-trash"></a></i>
+                                        </li>
+                                        <li>
+                                            <i style="background-image: url(pic/temp3.jpg);"><a href="javascript:;" class="icon-trash"></a></i>
+                                        </li>
+                                    </ul>
+                                    <a href="javascript:;" class="" id="upload"><i class="icon-upload-alt"></i> 上传图片</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="control-group">
+                            <label class="control-label"><em class="mark-red">(必填)</em>时间 :</label>
+                            <div class="controls">
+                                <input class="control-time" type="text" onfocus="WdatePicker({isShowWeek:true})" placeholder="请选择时间" />
+                            </div>
+                        </li>
+                        <li class="control-group">
+                            <label class="control-label"><em class="mark-red">(必填)</em>详细时间 :</label>
+                            <div class="controls">
+                                <input class="control-time" type="text" onfocus="WdatePicker({isShowWeek:true,dateFmt:'yyyy-MM-dd HH:mm:ss'})" placeholder="请选择时间:时分秒" />
+                            </div>
+                        </li>
+                        <li class="control-group">
+                            <label class="control-label"><em class="mark-red">(必填)</em>起始时间 :</label>
+                            <div class="controls">
+                                <input id="beginTime" class="control-time" type="text" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'endTime\')}'})" placeholder="开始时间" />
+                                <span class="time-connect-line">-</span>
+                                <input id="endTime" class="control-time" type="text" placeholder="结束时间" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'beginTime\')}'})" />
+                            </div>
+                        </li>
+                        <li class="control-group">
+                            <label class="control-label"><em class="mark-red">(必填)</em>备注 :</label>
+                            <div class="controls">
+                                <div class="control-txt">
+                                    <textarea placeholder="随便备注点啥......"></textarea>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="control-group">
+                            <label class="control-label"><em class="mark-red">(必填)</em>树 :</label>
+                            <div class="controls">
+                                <div class="control-tree">
+                                    <div id="tree" class="ztree "></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="control-group">
+                            <label class="control-label"><em class="mark-red">(必填)</em>用户名 :</label>
+                            <div class="controls">
+                                <input type="text" name="" placeholder="请输入用户名">
+                            </div>
+                        </li>
+                        <li class="control-group">
+                            <label class="control-label"></label>
+                            <div class="controls">
+                                <button class="btn btn-primary"><i class="icon-save"></i> 保存</button>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+    </footer>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="plus/webuploader/webuploader.js"></script>
+<script type="text/javascript" src="plus/datepicker/calendar.js"></script>
+<script type="text/javascript" src="plus/datepicker/WdatePicker.js"></script>
+<script type="text/javascript" src="plus/ztree/js/jquery.ztree.all.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+    // ztree的 舒适化
+    var zNodes = [{
+        name: "一年级",
+        open: true,
+        children: [{
+            name: "一年级1班"
+        }, {
+            name: "一年级2班"
+        }]
+    }, {
+        name: "二年级",
+        open: true,
+        children: [{
+            name: "二年级1班"
+        }, {
+            name: "二年级2班"
+        }]
+    }];
+
+    var zTreeObj = $.fn.zTree.init($("#tree"), treeSetting, zNodes);
+
+    /*
+     *  preview 生成上传的预览图
+     *  @param {string} el  
+     *  @param {string} src 
+     */
+    preview("#control-pic ul", "pic/temp3.jpg"); // 生成上传的预览图  - 
+    var upload = new WebUploader.Uploader({
+        server: "{:U('Addons/Upload/pc')}",
+        auto: true,
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        },
+        pick: {
+            id: "#upload"
+        }
+    });
+});
+</script>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/phadmin.css">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/select2.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/select2.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1></h1>
+        <div id="user-nav" class="navbar">
+            <ul class="nav">
+                <li><a title="" href="#"><i class="icon icon-user"></i>  <span class="text">欢迎回来，超级管理员</span></a>
+                </li>
+                <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text" >修改密码</span></a></li>
+                <li class=""><a title="" href="javescript:;" id="logout"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <!--sidebar-menu-->
+    <aside id="sidebar">
+        <div class="stitle"><i class="icon icon-dashboard"></i>&nbsp;&nbsp;&nbsp;&nbsp;平台导航</div>
+        <ul>
+            <li class="submenu "><a href="index.html"><i class="icon icon-home"></i> <span>主页</span></a></li>
+            <li class="submenu active"> <a href="table.html"><i class="icon icon-check"></i> <span>列表页</span></a>
+            </li>
+            <li class="submenu "> <a href="ico.html"><i class="icon icon-check"></i> <span>图标页</span></a>
+            </li>
+            <li class="submenu "> <a href="form.html"><i class="icon icon-check"></i> <span>表单页</span></a>
+            </li>
+        </ul>
+    </aside>
+    <section id="content">
+        <div id="content-header">
+            <div id="breadcrumb"> <a href="javascript:;" class="tip-bottom"><i class="icon-home"></i>主页</a> <a href="#" class="current">职位管理</a> </div>
+        </div>
+        <div id="content-body">
+            <div class="top-operation">
+                <div class="top-operation-add">
+                    <a href="javascript:;" class="btn btn-success"><i class="icon-plus"></i> 新增</a>
+                </div>
+                <div class="top-operation-input">
+                    <select class="select">
+                        <option>选项一</option>
+                        <option>选项er</option>
+                    </select>
+                    <input type="text" name="">
+                    <a href="javascript:;" class="btn btn-primary"><i class="icon-search"></i>搜索</a>
+                    <button class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+                </div>
+            </div>
+            <div class="table-content">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>年龄</th>
+                            <th>备注</th>
+                            <th width="300">操作</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>9527</td>
+                        <td>ranck</td>
+                        <td>24</td>
+                        <td>普通备注</td>
+                        <td><a href="javascript:;" class="btn btn-abc"><i class="icon-pencil"></i> 确定</a></td>
+                    </tr>
+                    <tr>
+                        <td>9527</td>
+                        <td>ranck</td>
+                        <td>24</td>
+                        <td>普通备注</td>
+                        <td><a href="javascript:;" class="btn btn-abc"><i class="icon-edit"></i> 确定</a><a href="javascript:;" class="btn btn-del"><i class="icon-trash"></i> 删除</a></td>
+                    </tr>
+                </table>
+            </div>
+            <footer class="">
+                <div class="pagecontent">
+                    <ul class="pagination">
+                        <li class="disabled"> <a href="#">上一页 </a></li>
+                        <li class="active"> <a href="#">1</a></li>
+                        <li><a href="?pageNo=2&amp;type=2">2</a></li>
+                        <li> <a href="?pageNo=2&amp;type=2">下一页 </a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </section>
+    <footer id="footer">
+    </footer>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("select").select2();
+});
+</script>
+
+</html>
