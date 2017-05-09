@@ -1,0 +1,385 @@
+/*reset*/
+
+body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background-image: url(../images/login3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+}
+
+html,
+body,
+div,
+p,
+ul,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+select,
+button,
+textarea,
+iframe,
+table,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0 none;
+}
+
+input,
+textarea {
+    font-family: "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti;
+}
+
+.font_arial {
+    font-family: Arial;
+}
+
+.font_yahei {
+    font-family: "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    border-top: 1px solid #e4e4e4;
+    overflow: hidden
+}
+
+hr.dashed {
+    border-top: 1px dashed #e4e4e4
+}
+
+a.hidefocus {
+    outline: none
+}
+
+button.hidefocus::-moz-focus-inner {
+    border: none
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f15 {
+    font-size: 15px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.f20 {
+    font-size: 20px;
+}
+
+.f24 {
+    font-size: 24px;
+}
+
+.f30 {
+    font-size: 30px;
+}
+
+.f36 {
+    font-size: 36px;
+}
+
+.clear {
+    clear: both;
+    line-height: 0;
+    font-size: 0;
+    height: 0
+}
+
+.clearfix:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: "."
+}
+
+
+/*login*/
+
+.log_wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    min-width: 600px;
+}
+
+.log_wrap a {
+    text-decoration: none;
+}
+
+.log_pack {
+    position: relative;
+    z-index: 5;
+    top: 35%;
+    width: 100%;
+    height: 400px;
+    min-width: 500px;
+}
+
+.pack_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 500px;
+}
+
+
+/* 登录上界面 */
+
+.user_tit {
+    height: 16%;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    text-align: center;
+    min-height: 120px;
+}
+
+.user_titwo {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.user_titwo span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.user_titwo span.tit_left {
+    width: 248px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: ccenter center;
+    background-size: 248px 80px;
+    margin-right: 30px;
+}
+
+.user_titwo span.tit_right {
+    font-size: 30px;
+    color: #222222;
+    border-left: 2px solid #444444;
+    padding: 10px 0 10px 30px;
+    letter-spacing: 5px;
+}
+
+
+/* 登录主界面 */
+
+.user_con {
+    display: inline-block;
+    width: 500px;
+    margin: 0 auto;
+    background: #f6f4f4;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px #A0A0A0;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.user_contwo {
+    position: relative;
+    top: 100%;
+    left: 10%;
+    background: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px #A0A0A0;
+    margin: auto;
+    width: 400px;
+    text-align: center;
+    height: 288px;
+}
+
+.user_contit {
+    color: #fff;
+    padding: 15px 0;
+    background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #1dc3a7), color-stop(100%, #17b592));
+    background-image: -webkit-linear-gradient(#1dc3a7, #17b592);
+    background-image: -moz-linear-gradient(#1dc3a7, #17b592);
+    background-image: -o-linear-gradient(#1dc3a7, #17b592);
+    background-image: linear-gradient(#1dc3a7, #17b592);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.user_name {
+    width: 378px;
+    height: 48px;
+    margin: 10px auto 20px auto;
+    border: 1px solid #68ddc5;
+    border-radius: 4px;
+    display: block;
+    font-size: 0
+}
+
+.user_name i {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    background-color: #e4f0ed;
+    background-repeat: no-repeat;
+    background-position: ccenter center;
+    background-size: 48px 48px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    vertical-align: middle;
+}
+
+.user_name input {
+    width: 313px;
+    height: 48px;
+    display: inline-block;
+    border: 0 none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    outline: none;
+    vertical-align: middle;
+    padding-left: 15px;
+    font-size: 15px;
+    color: #333;
+}
+
+.user_name select {
+    width: 328px;
+    height: 48px;
+    display: inline-block;
+    border: 0 none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    outline: none;
+    vertical-align: middle;
+    font-size: 15px;
+    color: #333;
+    padding-left: 15px;
+    font-family: "Microsoft Yahei";
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #1abc9c;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #1abc9c;
+}
+
+input:-ms-input-placeholder {
+    color: #1abc9c;
+}
+
+input::-webkit-input-placeholder {
+    color: #1abc9c;
+}
+
+.subbtn {
+    width: 378px;
+    height: 45px;
+    margin: 0 auto 10px auto;
+    border: 0 none;
+    background: #65a2c5;
+    border-radius: 4px;
+}
+
+.subbtn a {
+    height: 45px;
+    width: 100%;
+    display: block;
+    background-color: #65a2c5;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 45px;
+    font-weight: bold;
+    letter-spacing: 12px;
+    border-radius: 4px;
+    font-weight: normal;
+}
+
+.pack_wrap button a:hover {
+    background-color: #65a2cf;
+}
+
+.miss_pass {
+    padding: 10px 0;
+    width: 378px;
+    margin: 0 auto;
+    position: relative;
+    text-align: left !important;
+}
+
+.miss_pass a {
+    display: inline-block;
+    color: #1abc9c;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.miss_pass a:hover {
+    color: #3C9;
+}
+
+.miss_pass a.miss_right {
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
